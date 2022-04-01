@@ -63,6 +63,7 @@ const Home: NextPage = () => {
             })
           }
           ramp.onReady = function() {
+            console.log("Ramp API is initialized")
             init()
           }
          `,
