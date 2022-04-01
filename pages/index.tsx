@@ -53,7 +53,7 @@ const Home: NextPage = () => {
             // pass in the array where you defined the units
             .addUnits(pwUnits)
             .then(() => {
-              console.log(document.getElementsById("leaderboard_atf"))
+              console.log(document.getElementById("leaderboard_atf"))
               // then show the units
               ramp.displayUnits()
             }).catch( (e) =>{
@@ -62,7 +62,9 @@ const Home: NextPage = () => {
               console.log(e)
             })
           }
-
+          ramp.onReady = function() {
+            init()
+          }
          `,
           }}
         />
@@ -78,6 +80,7 @@ const Home: NextPage = () => {
         type="text/javascript"
       />
       <div className={styles.container}>
+        <h1>Ad banners should be display here.</h1>
         <div id="sky_btf"></div>
         <div id="sky_atf"></div>
         <div id="leaderboard_btf"></div>
